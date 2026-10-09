@@ -5,6 +5,7 @@ Survey = pd.read_csv('stack-overflow-developer-survey-2024/survey_results_public
 pd.set_option('display.max_columns', 114)
 pd.set_option('display.max_rows', 114)
 print(Survey)
+print(len(survey))
 
 # Displays the questions of the survey
 Schema_df = pd.read_csv('stack-overflow-developer-survey-2024/survey_results_schema.csv', index_col='qname')
@@ -21,10 +22,6 @@ print(Survey.tail(5))
 # Displays all the columns in each csv files
 print(Survey.columns)
 print(Schema_df.columns)
-
-# Displays the
-d1 = Survey.loc['Employment']
-print(d1)
 
 d1 = Survey['Employment']
 print(d1.value_counts())
@@ -52,7 +49,7 @@ Rename = Survey.rename(columns={'MainBranch':'Profession', 'RemoteWork':'WorkMod
 print(Survey['SalaryUSD'])
 
 # Sorting the Country and Salary column in Survey Data
-Survey.sort_values(by=[['Country', 'SalaryUSD']], ascending=[True, False], inplace=True)
+Survey.sort_values(by=['Country', 'SalaryUSD'], ascending=[True, False], inplace=True)
 print(Survey[['Country', 'SalaryUSD']].head(7))
 
 # Displays the 10 highest Salary per Annum
