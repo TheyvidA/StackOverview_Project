@@ -23,7 +23,7 @@ print(Survey.columns)
 print(Schema_df.columns)
 
 # Displays the
-#d1 = Survey.loc['Employment']
+d1 = Survey.loc['Employment']
 print(d1)
 
 d1 = Survey['Employment']
@@ -37,14 +37,14 @@ print(d2)
 print(Schema_df.sort_index())
 
 # Displays people with Salary of over $60,000
-#High_salary = (Survey['CompTotal'] > 60000)
-#H1 = Survey.loc[High_salary, ['Country', 'LanguageWantToWorkWith', 'CompTotal']]
+High_salary = (Survey['CompTotal'] > 60000)
+H1 = Survey.loc[High_salary, ['Country', 'LanguageWantToWorkWith', 'CompTotal']]
 print(H1)
 
 # Filtering by selected countries(USA,UK,India,Germany,Canada and Nigeria) with > $60,000 salary
-#Countries = ['United States of America', 'United Kingdom of Great Britain and Northern Ireland', 'Germany', 'India', 'Nigeria', 'Canada']
-#filt = (Survey['Country'].isin(Countries) & High_salary)
-#filt2 = Survey.loc[filt]
+Countries = ['United States of America', 'United Kingdom of Great Britain and Northern Ireland', 'Germany', 'India', 'Nigeria', 'Canada']
+filt = (Survey['Country'].isin(Countries) & High_salary)
+filt2 = Survey.loc[filt]
 print(filt2)
 
 # Renaming of Some columns
@@ -52,7 +52,7 @@ Rename = Survey.rename(columns={'MainBranch':'Profession', 'RemoteWork':'WorkMod
 print(Survey['SalaryUSD'])
 
 # Sorting the Country and Salary column in Survey Data
-#Survey.sort_values(by=[['Country', 'SalaryUSD']], ascending=[True, False], inplace=True)
+Survey.sort_values(by=[['Country', 'SalaryUSD']], ascending=[True, False], inplace=True)
 print(Survey[['Country', 'SalaryUSD']].head(7))
 
 # Displays the 10 highest Salary per Annum
