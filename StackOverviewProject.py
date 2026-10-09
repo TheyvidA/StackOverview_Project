@@ -5,7 +5,7 @@ Survey = pd.read_csv('stack-overflow-developer-survey-2024/survey_results_public
 pd.set_option('display.max_columns', 114)
 pd.set_option('display.max_rows', 114)
 print(Survey)
-print(len(survey))
+print(len(Survey))
 
 # Displays the questions of the survey
 Schema_df = pd.read_csv('stack-overflow-developer-survey-2024/survey_results_schema.csv', index_col='qname')
